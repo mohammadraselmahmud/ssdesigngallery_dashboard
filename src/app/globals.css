@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* Custom Colors */
+  --primary: rgb(144, 122, 105);
+  --primary-black: #1c1c1e;
+  --primary-white: #f8fafc;
+
+  --foundation-white-darker: rgb(89, 89, 89);
+  --foundation-white-darker-50: rgba(89, 89, 89, 0.5);
+  --foundation-brown-darker: rgb(50, 43, 37);
+
+  --input-border: #a2a2a3;
+
+  --danger: #ca0b00;
+  --muted: #727272;
+}
+
+/* :root {
+  --primary: #505050;    
+  --secondary: #696969;  
+
+  --neutral-50: #f9f9f9;  
+  --neutral-100: #ebebeb; 
+  --neutral-200: #e2e2e2; 
+  --neutral-300: #d4d4d4; 
+  --neutral-400: #cccccc; 
+  --neutral-500: #bfbfbf; 
+  --neutral-600: #aeeaea; 
+  --neutral-700: #888888; 
+  --neutral-800: #696969; 
+  --neutral-900: #505050; 
+
+  --primary-black: #1c1c1e;
+  --primary-white: #f8fafc;
+
+  --foundation-white-darker: #ecfdf5; 
+  --foundation-brown-darker: #10b981; 
+
+  --input-border: #10b981; 
+
+  --danger: #ca0b00; 
+  --muted: #064e3b; 
+} */
+
+
+* {
+  font-family: var(--font-montserrat) !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide Scrollbar */
+.scroll-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.border-red {
+  @apply border border-red-500;
+}
+
+/* --------- Custom Utilities ----------- */
+
+.flex-center-start {
+  @apply flex items-center justify-start;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-center-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-start-between {
+  @apply flex items-start justify-between;
+}
+
+.flex-center-start {
+  @apply flex items-center justify-start;
+}
+
+.flex-start-start {
+  @apply flex items-start justify-start;
+}
+
+/* Ant design override */
+.ant-modal-close-icon * {
+  fill: black !important;
+}
+
+.ant-tabs-tab-btn {
+  font-weight: 500;
+}
+
+.ant-otp input {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+}
+
+.ant-tag {
+  @apply !font-semibold;
+}
+
+.ant-form-item-label {
+  font-weight: 500 !important;
+}
+
+/* ------------- Jodit Editor Styles ------------------- */
+
+/* / Heading levels / */
+.jodit-wysiwyg h1 {
+  @apply text-2xl font-bold;
+}
+h1 {
+  @apply text-2xl font-bold;
+}
+
+.jodit-wysiwyg h2 {
+  @apply text-xl font-bold;
+}
+h2 {
+  @apply text-xl font-bold;
+}
+
+.jodit-wysiwyg h3 {
+  @apply text-lg font-semibold;
+}
+h3 {
+  @apply text-lg font-semibold;
+}
+
+.jodit-wysiwyg h4 {
+  @apply text-base font-medium;
+}
+h4 {
+  @apply text-base font-medium;
+}
+
+/* / Quotes / */
+.jodit-wysiwyg blockquote {
+  @apply rounded-lg border border-gray-200 bg-gray-100 p-4;
+}
+
+blockquote {
+  @apply rounded-lg border border-gray-200 bg-gray-100 p-4;
+}
+
+/* / Code blocks / */
+.jodit-wysiwyg pre,
+.jodit-wysiwyg code {
+  @apply rounded-lg bg-gray-900 px-4 py-2 font-mono text-white;
+}
+
+code {
+  @apply rounded-lg bg-gray-900 px-4 py-2 font-mono text-white;
+}
+pre {
+  @apply rounded-lg bg-gray-900 px-4 py-2 font-mono text-white;
+}
+
+/* / Unordered lists / */
+
+.jodit-wysiwyg ul {
+  @apply list-inside list-disc pl-8;
+}
+ul {
+  @apply list-inside list-disc pl-8;
+}
+.jodit-wysiwyg ol {
+  @apply list-inside list-decimal pl-8;
+}
+ol {
+  @apply list-inside list-decimal pl-8;
+}
+
+/* table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+td {
+  width: 16.6667%;
+  padding: 8px;
+  border: 1px solid #ddd;
+} */
+
+.enabled {
+  color: #333;
+}
+
+.disabled {
+  color: #999;
+}
+
+.activated {
+  color: #007bff;
+}
+
+.warning {
+  color: #ffc107;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.colorCheck {
+  @apply bg-slate-600 md:bg-blue-500 lg:bg-red-300 xl:bg-green-400;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: black rgb(209, 213, 219);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #fb8500;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+/* ------------------------------------- */
+/* SweetAlert2 Custom Styles */
+/* ------------------------------------- */
+.swal2-modal {
+  @apply !w-[30rem] !bg-primary !text-white;
+}
+
+.swal2-modal,
+.swal2-modal * {
+  font-family: var(--font-montserrat) !important;
+}
+
+.swal2-close {
+  @apply !mr-2 !mt-2 !h-[0.7em] !w-[0.7em];
+}
+
+/* ------------------------------------- */
+/* Ant Design Custom Styles */
+/* ------------------------------------- */
+.ant-upload-wrapper {
+  width: 100% !important;
+}
+.ant-upload-select {
+  width: 100% !important;
+}

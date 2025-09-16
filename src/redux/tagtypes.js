@@ -1,0 +1,25 @@
+export const tagTypes = {
+  auth: "Auth",
+  users: "Users",
+  user: "User",
+  otp: "Otp",
+  products: "Products",
+  product: "Product",
+  orders: "Orders",
+  order: "Order",
+  content: "Content",
+  notification: "Notification",
+  package: "Package",
+  earnings: "Earnings",
+  instructors: "Instructors",
+  courses: "Courses",
+  course: "Course",
+  categories: "Categories",
+  bookings: "Bookings",
+  attendance: "Attendance",
+  appLaunchRegisteredUsers: "AppLaunchRegisteredUsers",
+  dashboardData: "DashboardData",
+  payment: "Payment",
+};
+
+export const tagTypesList = Object.values(tagTypes);

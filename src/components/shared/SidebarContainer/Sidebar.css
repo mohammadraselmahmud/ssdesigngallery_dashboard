@@ -1,0 +1,24 @@
+.sidebar-menu > .ant-menu-item,
+.sidebar-menu .ant-menu-submenu {
+  @apply bg-primary-black !rounded-lg !border-none text-base !shadow-none;
+}
+
+.sidebar-menu > .ant-menu-item-selected {
+  @apply font-medium;
+}
+
+.sidebar-menu .ant-menu-submenu {
+  @apply mx-auto w-[97%];
+}
+
+.ant-menu-submenu-title * {
+  color: black !important;
+}
+
+/* .ant-menu-submenu-title:hover svg {
+  color: white !important;
+}
+
+.ant-menu-title-content:hover {
+  color: white !important;
+} */
