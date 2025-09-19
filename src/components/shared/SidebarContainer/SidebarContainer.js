@@ -38,6 +38,11 @@ const SidebarContainer = ({ collapsed }) => {
   const sidebarLinks = [
     
     {
+      key: "slider",
+      icon: <Users2 size={21} strokeWidth={2} />,
+      label: <Link href={"/admin/slider"}>Sliders</Link>,
+    },
+    {
       key: "account-details",
       icon: <Users2 size={21} strokeWidth={2} />,
       label: <Link href={"/admin/account-details"}>Account Details</Link>,
