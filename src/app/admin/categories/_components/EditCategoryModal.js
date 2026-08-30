@@ -1,6 +1,7 @@
 import CustomModal from "@/components/CustomModal/CustomModal";
 import FormWrapper from "@/components/Form/FormWrapper";
 import UInput from "@/components/Form/UInput";
+import UTextArea from "@/components/Form/UTextArea";
 import UUpload from "@/components/Form/UUpload";
 import { updateCategorySchema } from "@/schema/categorySchema";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,9 +9,10 @@ import { Button } from "antd";
 
 export default function EditCategoryModal({ open, setOpen, selectedCategory, handleEditCategory, isLoading}) {
 
-  const defaultValues ={
-    name:selectedCategory?.name
-  }
+  const defaultValues = {
+    name: selectedCategory?.name,
+    prompt: selectedCategory?.prompt,
+  };
 
   return (
     <CustomModal open={open} setOpen={setOpen} title="Edit Category">
@@ -28,7 +30,12 @@ export default function EditCategoryModal({ open, setOpen, selectedCategory, han
           name="name"
           label="Name"
           type="text"
-          placeholder="Enter your name"
+          placeholder="Enter category name"
+        />
+        <UTextArea
+          name="prompt"
+          label="Prompt"
+          placeholder="Enter prompt"
         />
 
         <Button
