@@ -11,6 +11,10 @@ import {
   CartesianGrid,
 } from "recharts";
 
+
+
+
+
 const CustomAreaChart = ({ chartName, data, setIncomeYear }) => {
   return (
     <div className="w-full rounded-xl bg-foundation-white-darker p-6 md:w-1/2">
