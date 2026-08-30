@@ -1,6 +1,7 @@
 import CustomModal from "@/components/CustomModal/CustomModal";
 import FormWrapper from "@/components/Form/FormWrapper";
 import UInput from "@/components/Form/UInput"; 
+import UTextArea from "@/components/Form/UTextArea";
 import UUpload from "@/components/Form/UUpload";
 import { useCreateCategoryMutation } from "@/redux/api/categoryApi";
 import { addCategorySchema } from "@/schema/categorySchema";
@@ -24,6 +25,8 @@ export default function AddCategoryModal({ open, setOpen }) {
 
     try {
       await createCategory(formData).unwrap(); 
+      successToast("Category created successfully!");
+      setOpen(false);
     } catch (error) {
       errorToast(error?.message || error?.data?.message);
     }
@@ -44,7 +47,12 @@ export default function AddCategoryModal({ open, setOpen }) {
           name="name"
           label="Name"
           type="text"
-          placeholder="Enter your name"
+          placeholder="Enter category name"
+        />
+        <UTextArea
+          name="prompt"
+          label="Prompt"
+          placeholder="Enter prompt"
         />
 
         <Button
