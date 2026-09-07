@@ -23,6 +23,7 @@ import { useDispatch } from "react-redux";
 import { successToast } from "@/utils/customToast";
 import { Shapes } from "lucide-react";
 import { Layers } from "lucide-react";
+import { Megaphone } from "lucide-react";
 
 const SidebarContainer = ({ collapsed }) => {
   const dispatch = useDispatch();
@@ -75,6 +76,11 @@ const SidebarContainer = ({ collapsed }) => {
       key: "subscriptions",
       icon: <FileText size={21} strokeWidth={2} />,
       label: <Link href={"/admin/subscriptions"}>Subscriptions</Link>,
+    },
+    {
+      key: "ads",
+      icon: <Megaphone size={21} strokeWidth={2} />,
+      label: <Link href={"/admin/ads"}>Ads</Link>,
     },
     {
       key: "settings",

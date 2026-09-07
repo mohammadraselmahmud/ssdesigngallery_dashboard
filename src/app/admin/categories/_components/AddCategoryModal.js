@@ -48,10 +48,11 @@ export default function AddCategoryModal({ open, setOpen }) {
           label="Name"
           type="text"
           placeholder="Enter category name"
-        />
+        /> 
         <UTextArea
           name="prompt"
           label="Prompt"
+          type="text"
           placeholder="Enter prompt"
         />
 
