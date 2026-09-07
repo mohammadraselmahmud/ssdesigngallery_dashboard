@@ -32,9 +32,10 @@ export default function EditCategoryModal({ open, setOpen, selectedCategory, han
           type="text"
           placeholder="Enter category name"
         />
-        <UTextArea
+        <UInput 
           name="prompt"
           label="Prompt"
+          type="text"
           placeholder="Enter prompt"
         />
 

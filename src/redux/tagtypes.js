@@ -17,6 +17,7 @@ export const tagTypes = {
   categories: "Categories", 
   dashboardData: "DashboardData", 
   slider: "slider",
+  ads: "Ads",
 };
 
 export const tagTypesList = Object.values(tagTypes);
