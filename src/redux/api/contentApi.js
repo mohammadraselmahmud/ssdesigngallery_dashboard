@@ -6,22 +6,20 @@ const contentApi = baseApi.injectEndpoints({
     getContents: builder.query({
       query: (query) => ({
         url: "/contents",
-        method: "GET",
+        method: "GET", 
         params: query,
       }),
 
       providesTags: [tagTypes.content],
     }),
-
-    updateContent: builder.mutation({
-      query: (data) => ({
-        url: `/contents`,
-        method: "PUT",
-        body: data,
-      }),
+toggleAiGenerationFeatures: builder.mutation({
+      query: () => ({ url: `/contents/toggle`, method: "PATCH"}),
       invalidatesTags: [tagTypes.content],
-    }),
-  }),
+}),
+  })
 });
 
-export const { useGetContentsQuery, useUpdateContentMutation } = contentApi;
+export const {
+  useGetContentsQuery,
+  useToggleAiGenerationFeaturesMutation
+} = contentApi;

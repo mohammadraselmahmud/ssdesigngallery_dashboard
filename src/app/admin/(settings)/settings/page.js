@@ -8,6 +8,11 @@ export const metadata = {
 
 const SETTINGS_LINKS = [
   {
+    key: "contents",
+    label: "Contents",
+    route: "/admin/contents",
+  },
+  {
     key: "personal-information",
     label: "Personal Information",
     route: "/admin/profile",
