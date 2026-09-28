@@ -46,6 +46,8 @@ export default function ContentsContainer() {
     !busy &&
     selected !== data.data.isAiGenerationEnabled;
 
+    
+
   const handleSave = async () => {
     if (!canSave) return;
     setIsSaving(true);
