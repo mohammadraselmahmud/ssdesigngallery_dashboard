@@ -18,6 +18,7 @@ export default function AddEditPackageModal({ open, setOpen, selectedPackage, on
     if (selectedPackage) {
       form.setFieldsValue({
         title: selectedPackage.title,
+        planName: selectedPackage.planName,
         productId: selectedPackage.productId,
         description: selectedPackage.description,
         price: selectedPackage.price,
@@ -57,6 +58,10 @@ export default function AddEditPackageModal({ open, setOpen, selectedPackage, on
     >
       <Form layout="vertical" form={form} onFinish={handleFinish}>
         <Form.Item name="title" label="Title" rules={[{ required: true, message: "Title is required" }]}> 
+          <Input />
+        </Form.Item>
+
+        <Form.Item name="planName" label="Plan Name" rules={[{ required: false }]}> 
           <Input />
         </Form.Item>
 

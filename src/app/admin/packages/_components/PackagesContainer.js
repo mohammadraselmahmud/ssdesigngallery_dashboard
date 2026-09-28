@@ -52,6 +52,7 @@ export default function PackagesContainer() {
 
   const columns = [
     { title: "Title", dataIndex: "title", key: "title", sorter: (a, b) => String(a.title || "").localeCompare(String(b.title || "")) },
+    { title: "Plan Name", dataIndex: "planName", key: "planName", sorter: (a, b) => String(a.planName || "").localeCompare(String(b.planName || "")) },
     { title: "Product ID", dataIndex: "productId", key: "productId", sorter: (a, b) => String(a.productId || "").localeCompare(String(b.productId || "")) },
     { title: "Price", dataIndex: "price", key: "price", sorter: (a, b) => Number(a.price || 0) - Number(b.price || 0) },
     { title: "Total Days", dataIndex: "totalDays", key: "totalDays", sorter: (a, b) => Number(a.totalDays || 0) - Number(b.totalDays || 0) },
