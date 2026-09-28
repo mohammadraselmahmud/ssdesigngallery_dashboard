@@ -81,8 +81,8 @@ export default function AddEditPackageModal({ open, setOpen, selectedPackage, on
           <InputNumber min={1} precision={0} style={{ width: '100%' }} />
         </Form.Item>
 
-        <Form.Item name="limit" label="Limit" rules={[{ required: true, message: "Limit required" }, { type: 'number', min: 1, message: 'Must be positive integer' }]}> 
-          <InputNumber min={1} precision={0} style={{ width: '100%' }} />
+        <Form.Item name="limit" label="Limit" rules={[{ required: true, message: "Limit required" }, { type: 'integer', min: 0, message: 'Limit must be a whole number of 0 or more' }]}>
+          <InputNumber min={0} precision={0} style={{ width: '100%' }} />
         </Form.Item>
 
         <Form.Item name="isRecommended" label="Recommended" valuePropName="checked">
